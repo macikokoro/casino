@@ -1,19 +1,22 @@
 
 <script>
-//Deck has 52 cards
-//Up to eight players
-//One Dealer
-//Game Start: two cards each
-//Player: cards face up
-//Player hit (more cards)
-//Player stand (no more cards) 
-//All players had a turn
-//Dealer's turn
-//Dealer stands, hand is 17 or more 
-//Dealer hit, hand is 16 or less
-//Player hand higher than Dealer's hand but less than 21 
-//Player wins
-//Player hand is lower thant Dealer's hand 
-//Dealer wins
-//End of game shuffle cards
+//Blackjack game
+//Assign a random number to a card
+function deal() {
+    var card = Math.floor(Math.random () * 52 + 1);
+    return card;
+}
+
+//Assign a value to the cards
+var card1 = deal();
+var card2 = deal();
+
+//Function to add the value of the cards
+function score() {
+    return card1 + card2;
+}
+
+//Print result
+console.log("Your score is " + card1 + " and " + card2 + score());
+
 </script>
