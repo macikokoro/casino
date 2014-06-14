@@ -13,6 +13,7 @@ var card2 = deal();
 
 // This function looks at different types of cards and their values
   // If its a face card, number should be set to 10        
+function getValue(){       
     if (card % 13 === 0 || card % 13 ===11 || card % 13 === 12) {
         return 10;
     }
@@ -26,7 +27,6 @@ var card2 = deal();
     }
 
 };
-
 
 //Function to add the value of the cards
 function score() {
