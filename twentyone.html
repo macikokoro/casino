@@ -11,6 +11,23 @@ function deal() {
 var card1 = deal();
 var card2 = deal();
 
+// This function looks at different types of cards and their values
+  // If its a face card, number should be set to 10        
+    if (card % 13 === 0 || card % 13 ===11 || card % 13 === 12) {
+        return 10;
+    }
+  //If it's an ace?
+    else if (card % 13 === 1) {
+        return 11;
+    }
+  // The rest of the cards
+    else {
+        return card % 13;
+    }
+
+};
+
+
 //Function to add the value of the cards
 function score() {
     return card1 + card2;
