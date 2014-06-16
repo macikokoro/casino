@@ -40,17 +40,18 @@ function Hand () {
       return score1 + score2;
   };
 }
-//Add players
+//Players
 var playerOne = new Hand();
-var playerTwo = new Hand();
+var dealer = new Hand();
 
-console.log ("Player one score " + playerOne.score() + " and player two score " + playerTwo.score());
+//Print results
+  console.log("Player one score: " + playerOne.score() + ", Dealer score: " + dealer.score());
 
-  if (playerTwo.score() > playerOne.score()) {
+  if (playerOne.score() > dealer.score()) {
     console.log ("Player one wins");
   }
-  else if (playerTwo.score() < playerOne.score()) {
-    console.log ("Player two wins");
+  else if (playerOne.score() < dealer.score()) {
+    console.log ("Dealer wins");
   }
   else {
     console.log("It's a tie!");
