@@ -58,14 +58,14 @@ var dealer = new Hand();
   }
 
 
-//New Game, New Player
+//New Player
 var newPlayer = ["Bob", "Joe", "Scarface", "Bugs"];
   
   newPlayer.shift();
 
   var getPlayer = newPlayer.length;
 
-  for (var i = 0; i < getPlayer; i++) {
+  for (var i = 0; i < getPlayer.length; i++) {
     console.log("The new challenger is: " + newPlayer[i]);
 }
 
