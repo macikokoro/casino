@@ -40,15 +40,25 @@ function Hand () {
       return score1 + score2;
   };
 }
-//Players
+
+
+//New Player
+  var newPlayer = ["Bob", "Joe", "Scarface", "Bugs"];
+  
+  var pickPlayer = function() {
+  var challenger = newPlayer[Math.floor(Math.random() * 4)];
+  return challenger;
+};
+
+//Hand
 var playerOne = new Hand();
 var dealer = new Hand();
 
 //Print results
-  console.log("Player one score: " + playerOne.score() + ", Dealer score: " + dealer.score());
+  console.log(pickPlayer() + "'s " + "score: "  + playerOne.score() + ", Dealer's score: " + dealer.score());
 
   if (playerOne.score() > dealer.score()) {
-    console.log ("Player one wins");
+    console.log (pickPlayer() + " wins");
   }
   else if (playerOne.score() < dealer.score()) {
     console.log ("Dealer wins");
@@ -56,18 +66,6 @@ var dealer = new Hand();
   else {
     console.log("It's a tie!");
   }
-
-
-//New Player
-  var newPlayer = ["Bob", "Joe", "Scarface", "Bugs"];
-
-  var pickPlayer = function() {
-  var challenger = newPlayer[Math.floor(Math.random() * 4)];
-  return challenger;
-};
-
-console.log("The new challenger is: " + pickPlayer()); 
-
 
 
 
