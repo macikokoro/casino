@@ -59,40 +59,14 @@ var dealer = new Hand();
 
 
 //New Player
-var newPlayer = ["Bob", "Joe", "Scarface", "Bugs"];
-  
-  newPlayer.shift();
+  var newPlayer = ["Bob", "Joe", "Scarface", "Bugs"];
 
-  var getPlayer = newPlayer.length;
+  var pickPlayer = function() {
+  var challenger = newPlayer[Math.floor(Math.random() * 4)];
+  return challenger;
+};
 
-  for (var i = 0; i < getPlayer.length; i++) {
-    console.log("The new challenger is: " + newPlayer[i]);
-}
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("The new challenger is: " + pickPlayer()); 
 
 
 
