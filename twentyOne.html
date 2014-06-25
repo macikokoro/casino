@@ -41,6 +41,9 @@ function Hand () {
   };
 }
 
+//Hand
+var playerOne = new Hand();
+var dealer = new Hand();
 
 //New Player
   var newPlayer = ["Bob", "Joe", "Scarface", "Bugs"];
@@ -50,15 +53,11 @@ function Hand () {
   return challenger;
 };
 
-//Hand
-var playerOne = new Hand();
-var dealer = new Hand();
+  console.log("Player " + pickPlayer() + " score: " + playerOne.score() + "\nDealer score: " + dealer.score());
 
-//Print results
-  console.log(pickPlayer() + "'s " + "score: "  + playerOne.score() + ", Dealer's score: " + dealer.score());
 
   if (playerOne.score() > dealer.score()) {
-    console.log (pickPlayer() + " wins");
+    console.log("Player wins");
   }
   else if (playerOne.score() < dealer.score()) {
     console.log ("Dealer wins");
@@ -66,7 +65,5 @@ var dealer = new Hand();
   else {
     console.log("It's a tie!");
   }
-
-
 
 </script>
